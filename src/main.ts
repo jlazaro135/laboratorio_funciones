@@ -18,6 +18,7 @@ function changeTurnToPrevious(): void{
 
 function changeTurnToNext(): void{
     let currentTurn = getCurrentTurn()
+    if(currentTurn === 9999)return
     let nextValue : string = String(++currentTurn).padStart(2, '0')
     checkElementAndPrintTurn(nextValue)
 }   
