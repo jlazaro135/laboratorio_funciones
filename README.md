@@ -1,12 +1,16 @@
-# typescript-sandbox
+# MODULO 4 - FUNCIONES
 
-Para la parte de cada módulo en la que te planteamos ejercicios con JavaScript puedes usar este sandbox.
+[DEMO LINK](https://laboratorio-funciones.netlify.app/)
 
-Pasos:
+Gestor de turnos creado con Typescript en modo estricto.
 
-- Clonate el proyecto.
-- Instala las dependencias con `npm install`.
-- Ejecuta el sandbox con `npm run dev`.
-- Abre el navegador en `http://localhost:5173/` (si ese puerto no te funciona, mira en la consola donde has hecho el build, puede que este ocupado y se haya abierto en otro puerto).
-- Puedes empezar a meter tu código en el fichero:
-# laboratorio_funciones
+Se modulariza código común (getCurrentTurn, checkElementAndPrint)
+
+Se evita pintar números con decimales mediante el redondeo
+
+Se controla que los números no sean mayores a 9999 o menores a 1
+
+Si se manda texto vacío o solo un punto, se devuelve 00
+
+
+
