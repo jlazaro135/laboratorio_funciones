@@ -4,22 +4,24 @@ const btnReset = document.querySelector('.js-reset')
 const btnSent = document.querySelector('.js-sent')
 let turnNumberEl = document.querySelector('.js-turn-number')
 
-btnPrevious?.addEventListener('click', () =>  changeTurnToPrevious())
-btnReset?.addEventListener('click', () => resetTurn())
-btnNext?.addEventListener('click', () => changeTurnToNext())
-btnSent?.addEventListener('click', () => sendTurn())
+if(btnPrevious instanceof HTMLButtonElement ) btnPrevious.addEventListener('click', () =>  changeTurnToPrevious())
+if(btnReset instanceof HTMLButtonElement ) btnReset.addEventListener('click', () => resetTurn())
+if(btnNext instanceof HTMLButtonElement ) btnNext.addEventListener('click', () => changeTurnToNext())
+if(btnSent instanceof HTMLButtonElement ) btnSent.addEventListener('click', () => sendTurn())
 
 function changeTurnToPrevious(): void{
     let currentTurn = getCurrentTurn()
-    let previousValue : string = String(--currentTurn).padStart(2, '0')
+    let currentTurnToStirng : string = (--currentTurn).toString()
+    let previousValue : string = currentTurnToStirng.padStart(2, '0')
     if(currentTurn < 0)return
     checkElementAndPrintTurn(previousValue)
 }
 
 function changeTurnToNext(): void{
     let currentTurn = getCurrentTurn()
-    if(currentTurn === 9999)return
-    let nextValue : string = String(++currentTurn).padStart(2, '0')
+    let currentTurnToStirng : string = (++currentTurn).toString()
+    if(currentTurn === 99)return
+    let nextValue : string = currentTurnToStirng.padStart(2, '0')
     checkElementAndPrintTurn(nextValue)
 }   
 
